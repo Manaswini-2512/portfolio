@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Trawell | Manaswini</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .project-hero { background: linear-gradient(135deg, rgba(0,255,200,0.05), rgba(0,170,255,0.05)); border: 1px solid var(--card-border); border-radius: 16px; padding: 40px; margin-bottom: 56px; position: relative; overflow: hidden; }
+    .project-meta { display: flex; gap: 28px; flex-wrap: wrap; margin-top: 20px; }
+    .meta-item { display: flex; flex-direction: column; gap: 4px; }
+    .meta-label { font-family: 'Space Mono', monospace; font-size: 0.65rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--neon); }
+    .meta-value { font-size: 0.9rem; color: var(--text); font-weight: 600; }
+    .content-block { margin-bottom: 48px; }
+    .content-block h2 { font-size: 0.75rem !important; letter-spacing: 0.18em; text-transform: uppercase; color: var(--neon); font-family: 'Space Mono', monospace; margin-bottom: 20px !important; margin-top: 0 !important; }
+    .content-block p { color: var(--muted); line-height: 1.85; font-size: 0.97rem; margin-bottom: 12px; }
+    .content-block p strong { color: var(--text); }
+    .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+    .highlight-box { background: rgba(0,255,200,0.04); border: 1px solid rgba(0,255,200,0.15); border-radius: 12px; padding: 24px; }
+    .highlight-box h3 { font-size: 0.9rem; font-weight: 700; color: var(--white); margin-bottom: 14px; }
+    .highlight-box ul { list-style: none; }
+    .highlight-box ul li { color: var(--muted); font-size: 0.88rem; padding: 7px 0 7px 18px; border-bottom: 1px solid rgba(255,255,255,0.04); position: relative; line-height: 1.5; }
+    .highlight-box ul li::before { content: '▹'; color: var(--neon); position: absolute; left: 0; }
+    .highlight-box ul li:last-child { border-bottom: none; }
+    .learned-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); gap: 14px; }
+    .learned-card { background: var(--card); border: 1px solid var(--card-border); border-radius: 10px; padding: 18px; transition: border-color 0.3s, transform 0.3s; }
+    .learned-card:hover { border-color: rgba(0,255,200,0.3); transform: translateY(-3px); }
+    .learned-card .icon { font-size: 1.4rem; margin-bottom: 10px; display: block; }
+    .learned-card h4 { font-size: 0.85rem; color: var(--white); margin-bottom: 6px; font-weight: 700; }
+    .learned-card p { color: var(--muted); font-size: 0.78rem; line-height: 1.5; margin: 0; }
+    .hero-emoji { position: absolute; right: 32px; top: 24px; font-size: 5rem; opacity: 0.1; pointer-events: none; }
+    @media (max-width: 600px) { .two-col { grid-template-columns: 1fr; } .project-hero { padding: 24px; } .hero-emoji { display: none; } }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">M<span>.</span></a>
+  <div class="nav-links" id="navLinks">
+    <a href="index.html#about">About</a>
+    <a href="index.html#skills">Skills</a>
+    <a href="index.html#projects">Projects</a>
+    <a href="index.html#contact">Contact</a>
+  </div>
+  <div class="hamburger" onclick="document.getElementById('navLinks').classList.toggle('open')">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<div class="project-page">
+
+  <div class="project-hero">
+    <span class="hero-emoji">🌍</span>
+    <p class="section-label" style="margin-bottom:10px;">// Full Stack Web App</p>
+    <h1 style="margin-bottom:16px;">🌍 Trawell</h1>
+    <p style="color:var(--muted); max-width:520px; line-height:1.7; font-size:0.97rem; margin:0;">
+      A tourism and handicraft e-commerce platform that bridges travellers with authentic
+      local experiences and artisan products — built end-to-end on the MERN stack.
+    </p>
+    <div class="project-meta">
+      <div class="meta-item"><span class="meta-label">Type</span><span class="meta-value">Full Stack Web App</span></div>
+      <div class="meta-item"><span class="meta-label">Role</span><span class="meta-value">Solo Developer</span></div>
+      <div class="meta-item"><span class="meta-label">Stack</span><span class="meta-value">MERN</span></div>
+    </div>
+  </div>
+
+  <div class="content-block">
+    <h2>Overview</h2>
+    <p>
+      Trawell was built to make local tourism more accessible and give artisans a digital storefront.
+      Users can <strong>discover tourism destinations</strong> through curated guides and
+      <strong>purchase handicraft products</strong> directly — all in one seamless platform.
+    </p>
+    <p>
+      The project covers the entire product lifecycle: user authentication, destination browsing,
+      product listings, and cart management — making it feel like a genuine production-grade application.
+    </p>
+  </div>
+
+  <div class="content-block">
+    <h2>My Role &amp; Contribution</h2>
+    <div class="two-col">
+      <div class="highlight-box">
+        <h3>🖥️ Frontend</h3>
+        <ul>
+          <li>Designed and built all React components from scratch</li>
+          <li>Implemented fully responsive layouts for mobile and desktop</li>
+          <li>Built destination browsing and product listing pages</li>
+          <li>Handled client-side routing using React Router</li>
+        </ul>
+      </div>
+      <div class="highlight-box">
+        <h3>⚙️ Backend</h3>
+        <ul>
+          <li>Architected the REST API with Express.js</li>
+          <li>Designed MongoDB schemas for users, destinations, and products</li>
+          <li>Implemented JWT-based authentication (login/signup)</li>
+          <li>Connected frontend to backend via Axios API calls</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="content-block">
+    <h2>Key Features</h2>
+    <ul>
+      <li>Secure user authentication and session management with JWT</li>
+      <li>Browse and explore tourism destinations with rich detail pages</li>
+      <li>Handicraft product listings with descriptions and images</li>
+      <li>Responsive UI that works across all screen sizes</li>
+      <li>Clean RESTful API with separation of concerns across routes and controllers</li>
+    </ul>
+  </div>
+
+  <div class="content-block">
+    <h2>Challenges &amp; How I Solved Them</h2>
+    <div class="two-col">
+      <div class="highlight-box">
+        <h3>🔐 Auth State Across Components</h3>
+        <ul>
+          <li>Keeping login state in sync across deeply nested components was tricky</li>
+          <li>Lifted auth state to the App root and passed it via context, avoiding prop drilling</li>
+          <li>Stored JWT in localStorage and attached it to every protected API request via Axios interceptors</li>
+        </ul>
+      </div>
+      <div class="highlight-box">
+        <h3>📦 Data Modelling</h3>
+        <ul>
+          <li>Deciding how to relate users, destinations, and products in a NoSQL DB required planning</li>
+          <li>Used referenced documents for users and embedded sub-documents for product metadata to balance performance and flexibility</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="content-block">
+    <h2>What I Learned</h2>
+    <div class="learned-grid">
+      <div class="learned-card">
+        <span class="icon">⚛️</span>
+        <h4>React Architecture</h4>
+        <p>How to structure reusable, maintainable components with clean state and props patterns.</p>
+      </div>
+      <div class="learned-card">
+        <span class="icon">🔑</span>
+        <h4>JWT Auth End-to-End</h4>
+        <p>Full auth flow — token generation, protected routes, storage, and expiry handling.</p>
+      </div>
+      <div class="learned-card">
+        <span class="icon">🗄️</span>
+        <h4>MongoDB Schema Design</h4>
+        <p>Modelling real-world relationships between users, products, and destinations in NoSQL.</p>
+      </div>
+      <div class="learned-card">
+        <span class="icon">🌐</span>
+        <h4>Full Stack Thinking</h4>
+        <p>Coordinating frontend and backend decisions together rather than in isolation.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="content-block">
+    <h2>Tech Stack</h2>
+    <div class="tech-stack">
+      <span class="tech-pill">MongoDB</span>
+      <span class="tech-pill">Express.js</span>
+      <span class="tech-pill">React.js</span>
+      <span class="tech-pill">Node.js</span>
+      <span class="tech-pill">JWT</span>
+      <span class="tech-pill">Axios</span>
+      <span class="tech-pill">React Router</span>
+    </div>
+  </div>
+
+  <div class="content-block">
+    <h2>Screenshots</h2>
+    <div class="screenshots">
+      <img src="images/trawell1.png" alt="Trawell home page" width="300">
+      <img src="images/trawell2.png" alt="Trawell product listing" width="300">
+    </div>
+  </div>
+
+  <div class="project-links">
+    <a href="https://github.com/Manaswini-2512/trawell" class="btn btn-primary" target="_blank">↗ View on GitHub</a>
+    <a href="projects.html" class="btn btn-outline">⬅ Back to Projects</a>
+  </div>
+
+</div>
+
+<footer><p>Designed &amp; built by <span>Manaswini</span> · 2025</p></footer>
+</body>
+</html>

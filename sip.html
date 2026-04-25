@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>SIP Advisor | Manaswini</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .project-hero { background: linear-gradient(135deg, rgba(0,255,200,0.06), rgba(168,85,247,0.05)); border: 1px solid var(--card-border); border-radius: 16px; padding: 40px; margin-bottom: 56px; position: relative; overflow: hidden; }
+    .project-meta { display: flex; gap: 28px; flex-wrap: wrap; margin-top: 20px; }
+    .meta-item { display: flex; flex-direction: column; gap: 4px; }
+    .meta-label { font-family: 'Space Mono', monospace; font-size: 0.65rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--neon); }
+    .meta-value { font-size: 0.9rem; color: var(--text); font-weight: 600; }
+    .content-block { margin-bottom: 48px; }
+    .content-block h2 { font-size: 0.75rem !important; letter-spacing: 0.18em; text-transform: uppercase; color: var(--neon); font-family: 'Space Mono', monospace; margin-bottom: 20px !important; margin-top: 0 !important; }
+    .content-block p { color: var(--muted); line-height: 1.85; font-size: 0.97rem; margin-bottom: 12px; }
+    .content-block p strong { color: var(--text); }
+    .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+    .highlight-box { background: rgba(0,255,200,0.04); border: 1px solid rgba(0,255,200,0.15); border-radius: 12px; padding: 24px; }
+    .highlight-box h3 { font-size: 0.9rem; font-weight: 700; color: var(--white); margin-bottom: 14px; }
+    .highlight-box ul { list-style: none; }
+    .highlight-box ul li { color: var(--muted); font-size: 0.88rem; padding: 7px 0 7px 18px; border-bottom: 1px solid rgba(255,255,255,0.04); position: relative; line-height: 1.5; }
+    .highlight-box ul li::before { content: '▹'; color: var(--neon); position: absolute; left: 0; }
+    .highlight-box ul li:last-child { border-bottom: none; }
+    .learned-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); gap: 14px; }
+    .learned-card { background: var(--card); border: 1px solid var(--card-border); border-radius: 10px; padding: 18px; transition: border-color 0.3s, transform 0.3s; }
+    .learned-card:hover { border-color: rgba(0,255,200,0.3); transform: translateY(-3px); }
+    .learned-card .icon { font-size: 1.4rem; margin-bottom: 10px; display: block; }
+    .learned-card h4 { font-size: 0.85rem; color: var(--white); margin-bottom: 6px; font-weight: 700; }
+    .learned-card p { color: var(--muted); font-size: 0.78rem; line-height: 1.5; margin: 0; }
+    .hero-emoji { position: absolute; right: 32px; top: 24px; font-size: 5rem; opacity: 0.1; pointer-events: none; }
+    @media (max-width: 600px) { .two-col { grid-template-columns: 1fr; } .project-hero { padding: 24px; } .hero-emoji { display: none; } }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">M<span>.</span></a>
+  <div class="nav-links" id="navLinks">
+    <a href="index.html#about">About</a>
+    <a href="index.html#skills">Skills</a>
+    <a href="index.html#projects">Projects</a>
+    <a href="index.html#contact">Contact</a>
+  </div>
+  <div class="hamburger" onclick="document.getElementById('navLinks').classList.toggle('open')">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<div class="project-page">
+
+  <div class="project-hero">
+    <span class="hero-emoji">💰</span>
+    <p class="section-label" style="margin-bottom:10px;">// Python · Flask Web App</p>
+    <h1 style="margin-bottom:16px;">💰 SIP Advisor</h1>
+    <p style="color:var(--muted); max-width:520px; line-height:1.7; font-size:0.97rem; margin:0;">
+      A financial advisory web application that helps users understand and optimize their
+      Systematic Investment Plans through data-driven insights and interactive visualizations.
+    </p>
+    <div class="project-meta">
+      <div class="meta-item"><span class="meta-label">Type</span><span class="meta-value">Web Application</span></div>
+      <div class="meta-item"><span class="meta-label">Role</span><span class="meta-value">Solo Developer</span></div>
+      <div class="meta-item"><span class="meta-label">Stack</span><span class="meta-value">Python · Flask · JS</span></div>
+    </div>
+  </div>
+
+  <div class="content-block">
+    <h2>Overview</h2>
+    <p>
+      SIP (Systematic Investment Plan) investing is one of the most popular wealth-building strategies,
+      but most people struggle to visualise how their money actually grows. SIP Advisor was built to
+      <strong>demystify long-term investing</strong> by letting users input their parameters and
+      instantly see projected returns, breakdowns, and charts.
+    </p>
+    <p>
+      The application combines a <strong>Flask backend</strong> for financial computation with
+      a <strong>dynamic JavaScript frontend</strong> that renders charts and insights in real time —
+      making complex calculations feel simple and accessible.
+    </p>
+  </div>
+
+  <div class="content-block">
+    <h2>My Role &amp; Contribution</h2>
+    <div class="two-col">
+      <div class="highlight-box">
+        <h3>📊 Financial Logic</h3>
+        <ul>
+          <li>Implemented SIP compound growth formulas in Python</li>
+          <li>Built return projection engine for different investment durations</li>
+          <li>Calculated month-by-month breakdown of invested vs returned value</li>
+          <li>Added support for variable interest rate scenarios</li>
+        </ul>
+      </div>
+      <div class="highlight-box">
+        <h3>🎨 Frontend &amp; Visualisation</h3>
+        <ul>
+          <li>Built the UI with HTML, CSS, and vanilla JavaScript</li>
+          <li>Integrated Chart.js to render interactive investment growth charts</li>
+          <li>Created a responsive layout so it works on mobile and desktop</li>
+          <li>Wired the frontend to Flask APIs for real-time result updates</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="content-block">
+    <h2>Key Features</h2>
+    <ul>
+      <li>Input monthly investment, rate of return, and duration to get instant projections</li>
+      <li>Interactive line chart showing wealth growth over time using Chart.js</li>
+      <li>Side-by-side comparison of total invested vs total returns</li>
+      <li>Expense tracking module to help users identify savings potential</li>
+      <li>Clean, responsive UI that works across devices</li>
+    </ul>
+  </div>
+
+  <div class="content-block">
+    <h2>Challenges &amp; How I Solved Them</h2>
+    <div class="two-col">
+      <div class="highlight-box">
+        <h3>📉 Accurate Financial Modelling</h3>
+        <ul>
+          <li>SIP calculations involve monthly compounding which is easy to get wrong</li>
+          <li>Cross-validated all formulas against known financial calculator outputs before shipping</li>
+          <li>Added edge case handling for zero values, very short durations, and high rates</li>
+        </ul>
+      </div>
+      <div class="highlight-box">
+        <h3>⚡ Real-Time UI Updates</h3>
+        <ul>
+          <li>Updating charts on every input change without full page reloads was a UX requirement</li>
+          <li>Used JavaScript event listeners to debounce input and trigger Chart.js re-renders via Flask API calls</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="content-block">
+    <h2>What I Learned</h2>
+    <div class="learned-grid">
+      <div class="learned-card">
+        <span class="icon">🐍</span>
+        <h4>Flask API Design</h4>
+        <p>How to expose Python logic as clean REST endpoints and consume them from a JS frontend.</p>
+      </div>
+      <div class="learned-card">
+        <span class="icon">📈</span>
+        <h4>Data Visualisation</h4>
+        <p>Using Chart.js to turn raw number arrays into meaningful, interactive charts users can act on.</p>
+      </div>
+      <div class="learned-card">
+        <span class="icon">💡</span>
+        <h4>Domain Knowledge</h4>
+        <p>Deep-diving into SIP maths, compounding, and financial terminology to build something accurate.</p>
+      </div>
+      <div class="learned-card">
+        <span class="icon">🔗</span>
+        <h4>Frontend–Backend Bridge</h4>
+        <p>Connecting a Python backend to a JS frontend without a heavy framework like React.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="content-block">
+    <h2>Tech Stack</h2>
+    <div class="tech-stack">
+      <span class="tech-pill">Python</span>
+      <span class="tech-pill">Flask</span>
+      <span class="tech-pill">JavaScript</span>
+      <span class="tech-pill">Chart.js</span>
+      <span class="tech-pill">HTML5</span>
+      <span class="tech-pill">CSS3</span>
+    </div>
+  </div>
+
+  <div class="content-block">
+    <h2>Screenshots</h2>
+    <div class="screenshots">
+      <img src="images/sip1.png" alt="SIP Advisor dashboard" width="300">
+      <img src="images/sip2.png" alt="SIP growth chart" width="300">
+    </div>
+  </div>
+
+  <div class="project-links">
+    <a href="https://github.com/Manaswini-2512/smart-saver" class="btn btn-primary" target="_blank">↗ View on GitHub</a>
+    <a href="projects.html" class="btn btn-outline">⬅ Back to Projects</a>
+  </div>
+
+</div>
+
+<footer><p>Designed &amp; built by <span>Manaswini</span> · 2025</p></footer>
+</body>
+</html>

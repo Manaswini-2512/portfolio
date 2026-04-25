@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Stacking Plates | Manaswini</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .project-hero { background: linear-gradient(135deg, rgba(168,85,247,0.07), rgba(0,170,255,0.05)); border: 1px solid rgba(168,85,247,0.2); border-radius: 16px; padding: 40px; margin-bottom: 56px; position: relative; overflow: hidden; }
+    .project-meta { display: flex; gap: 28px; flex-wrap: wrap; margin-top: 20px; }
+    .meta-item { display: flex; flex-direction: column; gap: 4px; }
+    .meta-label { font-family: 'Space Mono', monospace; font-size: 0.65rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--neon3); }
+    .meta-value { font-size: 0.9rem; color: var(--text); font-weight: 600; }
+    .content-block { margin-bottom: 48px; }
+    .content-block h2 { font-size: 0.75rem !important; letter-spacing: 0.18em; text-transform: uppercase; color: var(--neon3); font-family: 'Space Mono', monospace; margin-bottom: 20px !important; margin-top: 0 !important; }
+    .content-block p { color: var(--muted); line-height: 1.85; font-size: 0.97rem; margin-bottom: 12px; }
+    .content-block p strong { color: var(--text); }
+    .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+    .highlight-box { background: rgba(168,85,247,0.04); border: 1px solid rgba(168,85,247,0.18); border-radius: 12px; padding: 24px; }
+    .highlight-box h3 { font-size: 0.9rem; font-weight: 700; color: var(--white); margin-bottom: 14px; }
+    .highlight-box ul { list-style: none; }
+    .highlight-box ul li { color: var(--muted); font-size: 0.88rem; padding: 7px 0 7px 18px; border-bottom: 1px solid rgba(255,255,255,0.04); position: relative; line-height: 1.5; }
+    .highlight-box ul li::before { content: '▹'; color: var(--neon3); position: absolute; left: 0; }
+    .highlight-box ul li:last-child { border-bottom: none; }
+    .learned-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); gap: 14px; }
+    .learned-card { background: var(--card); border: 1px solid var(--card-border); border-radius: 10px; padding: 18px; transition: border-color 0.3s, transform 0.3s; }
+    .learned-card:hover { border-color: rgba(168,85,247,0.35); transform: translateY(-3px); }
+    .learned-card .icon { font-size: 1.4rem; margin-bottom: 10px; display: block; }
+    .learned-card h4 { font-size: 0.85rem; color: var(--white); margin-bottom: 6px; font-weight: 700; }
+    .learned-card p { color: var(--muted); font-size: 0.78rem; line-height: 1.5; margin: 0; }
+    .hero-emoji { position: absolute; right: 32px; top: 24px; font-size: 5rem; opacity: 0.1; pointer-events: none; }
+    @media (max-width: 600px) { .two-col { grid-template-columns: 1fr; } .project-hero { padding: 24px; } .hero-emoji { display: none; } }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">M<span>.</span></a>
+  <div class="nav-links" id="navLinks">
+    <a href="index.html#about">About</a>
+    <a href="index.html#skills">Skills</a>
+    <a href="index.html#projects">Projects</a>
+    <a href="index.html#contact">Contact</a>
+  </div>
+  <div class="hamburger" onclick="document.getElementById('navLinks').classList.toggle('open')">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<div class="project-page">
+
+  <div class="project-hero">
+    <span class="hero-emoji">🎮</span>
+    <p class="section-label" style="margin-bottom:10px; color:var(--neon3);">// Python Game</p>
+    <h1 style="margin-bottom:16px;">🎮 Stacking Plates</h1>
+    <p style="color:var(--muted); max-width:520px; line-height:1.7; font-size:0.97rem; margin:0;">
+      A strategic, multi-level puzzle game where players stack plates under time pressure —
+      complete with a leaderboard, undo moves, and progressively harder levels.
+    </p>
+    <div class="project-meta">
+      <div class="meta-item"><span class="meta-label">Type</span><span class="meta-value">Desktop Game</span></div>
+      <div class="meta-item"><span class="meta-label">Role</span><span class="meta-value">Solo Developer</span></div>
+      <div class="meta-item"><span class="meta-label">Stack</span><span class="meta-value">Python · Pygame</span></div>
+    </div>
+  </div>
+
+  <div class="content-block">
+    <h2>Overview</h2>
+    <p>
+      Stacking Plates is a <strong>logic-based puzzle game</strong> inspired by classic tower-stacking
+      mechanics. Players must arrange plates in the correct order across multiple levels, each
+      with increasing complexity and tighter time limits.
+    </p>
+    <p>
+      The game was built entirely in Python using Pygame, focusing on clean game loop architecture,
+      real-time rendering, and a satisfying player experience with features like undo and persistent leaderboards.
+    </p>
+  </div>
+
+  <div class="content-block">
+    <h2>My Role &amp; Contribution</h2>
+    <div class="two-col">
+      <div class="highlight-box">
+        <h3>🎮 Game Design</h3>
+        <ul>
+          <li>Designed the core puzzle mechanics and level progression</li>
+          <li>Defined win/loss conditions and difficulty scaling across levels</li>
+          <li>Created the undo system using a stack data structure</li>
+          <li>Balanced timer values to keep gameplay challenging but fair</li>
+        </ul>
+      </div>
+      <div class="highlight-box">
+        <h3>💻 Engineering</h3>
+        <ul>
+          <li>Implemented the full game loop: input handling, update, render</li>
+          <li>Built the leaderboard with file I/O for persistent high score storage</li>
+          <li>Managed game states — menu, playing, paused, game over</li>
+          <li>Rendered all game elements using Pygame's drawing and sprite APIs</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="content-block">
+    <h2>Key Features</h2>
+    <ul>
+      <li>Multiple levels with progressively increasing difficulty</li>
+      <li>Countdown timer that adds urgency to each level</li>
+      <li>Undo functionality powered by a stack data structure</li>
+      <li>Persistent leaderboard that saves top scores between sessions</li>
+      <li>Clean game state management — menu, playing, paused, game over</li>
+    </ul>
+  </div>
+
+  <div class="content-block">
+    <h2>Challenges &amp; How I Solved Them</h2>
+    <div class="two-col">
+      <div class="highlight-box">
+        <h3>⏱️ Real-Time Game Loop</h3>
+        <ul>
+          <li>Keeping the timer, animations, and input handling in sync without lag was a challenge</li>
+          <li>Used Pygame's <code style="color:var(--neon3);">Clock.tick()</code> to cap frame rate and decouple game speed from hardware</li>
+        </ul>
+      </div>
+      <div class="highlight-box">
+        <h3>↩️ Undo System Design</h3>
+        <ul>
+          <li>Needed a reliable way to revert moves without duplicating state everywhere</li>
+          <li>Implemented a command-history stack — each move pushed a snapshot, undo popped it</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="content-block">
+    <h2>What I Learned</h2>
+    <div class="learned-grid">
+      <div class="learned-card">
+        <span class="icon">🔄</span>
+        <h4>Game Loop Architecture</h4>
+        <p>How to structure the event → update → render cycle cleanly for real-time applications.</p>
+      </div>
+      <div class="learned-card">
+        <span class="icon">📚</span>
+        <h4>DSA in Practice</h4>
+        <p>Applied stack data structures to build the undo system — bridging theory and real use.</p>
+      </div>
+      <div class="learned-card">
+        <span class="icon">🎨</span>
+        <h4>Pygame Rendering</h4>
+        <p>Managing sprites, surfaces, and frame-rate-independent rendering in Pygame.</p>
+      </div>
+      <div class="learned-card">
+        <span class="icon">💾</span>
+        <h4>Persistent Storage</h4>
+        <p>Using file I/O to store and retrieve leaderboard data between game sessions.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="content-block">
+    <h2>Tech Stack</h2>
+    <div class="tech-stack">
+      <span class="tech-pill">Python</span>
+      <span class="tech-pill">Pygame</span>
+      <span class="tech-pill">File I/O</span>
+      <span class="tech-pill">OOP</span>
+    </div>
+  </div>
+   <div class="content-block">
+    <h2>Screenshots</h2>
+    <div class="screenshots">
+      <img src="images/game1.png" alt="Hostel allocation dashboard" width="300">
+      <img src="images/game2.png" alt="Student registration form" width="300">
+    </div>
+  </div>
+
+  <div class="project-links">
+    <a href="https://github.com/Manaswini-2512/stacking-plates" class="btn btn-primary" target="_blank">↗ View on GitHub</a>
+    <a href="projects.html" class="btn btn-outline">⬅ Back to Projects</a>
+  </div>
+
+</div>
+
+<footer><p>Designed &amp; built by <span>Manaswini</span> · 2025</p></footer>
+</body>
+</html>

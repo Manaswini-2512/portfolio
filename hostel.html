@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Hostel Allocation | Manaswini</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .project-hero { background: linear-gradient(135deg, rgba(0,170,255,0.07), rgba(0,255,200,0.04)); border: 1px solid rgba(0,170,255,0.2); border-radius: 16px; padding: 40px; margin-bottom: 56px; position: relative; overflow: hidden; }
+    .project-meta { display: flex; gap: 28px; flex-wrap: wrap; margin-top: 20px; }
+    .meta-item { display: flex; flex-direction: column; gap: 4px; }
+    .meta-label { font-family: 'Space Mono', monospace; font-size: 0.65rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--neon2); }
+    .meta-value { font-size: 0.9rem; color: var(--text); font-weight: 600; }
+    .content-block { margin-bottom: 48px; }
+    .content-block h2 { font-size: 0.75rem !important; letter-spacing: 0.18em; text-transform: uppercase; color: var(--neon2); font-family: 'Space Mono', monospace; margin-bottom: 20px !important; margin-top: 0 !important; }
+    .content-block p { color: var(--muted); line-height: 1.85; font-size: 0.97rem; margin-bottom: 12px; }
+    .content-block p strong { color: var(--text); }
+    .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+    .highlight-box { background: rgba(0,170,255,0.04); border: 1px solid rgba(0,170,255,0.18); border-radius: 12px; padding: 24px; }
+    .highlight-box h3 { font-size: 0.9rem; font-weight: 700; color: var(--white); margin-bottom: 14px; }
+    .highlight-box ul { list-style: none; }
+    .highlight-box ul li { color: var(--muted); font-size: 0.88rem; padding: 7px 0 7px 18px; border-bottom: 1px solid rgba(255,255,255,0.04); position: relative; line-height: 1.5; }
+    .highlight-box ul li::before { content: '▹'; color: var(--neon2); position: absolute; left: 0; }
+    .highlight-box ul li:last-child { border-bottom: none; }
+    .learned-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); gap: 14px; }
+    .learned-card { background: var(--card); border: 1px solid var(--card-border); border-radius: 10px; padding: 18px; transition: border-color 0.3s, transform 0.3s; }
+    .learned-card:hover { border-color: rgba(0,170,255,0.35); transform: translateY(-3px); }
+    .learned-card .icon { font-size: 1.4rem; margin-bottom: 10px; display: block; }
+    .learned-card h4 { font-size: 0.85rem; color: var(--white); margin-bottom: 6px; font-weight: 700; }
+    .learned-card p { color: var(--muted); font-size: 0.78rem; line-height: 1.5; margin: 0; }
+    .hero-emoji { position: absolute; right: 32px; top: 24px; font-size: 5rem; opacity: 0.1; pointer-events: none; }
+    @media (max-width: 600px) { .two-col { grid-template-columns: 1fr; } .project-hero { padding: 24px; } .hero-emoji { display: none; } }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">M<span>.</span></a>
+  <div class="nav-links" id="navLinks">
+    <a href="index.html#about">About</a>
+    <a href="index.html#skills">Skills</a>
+    <a href="index.html#projects">Projects</a>
+    <a href="index.html#contact">Contact</a>
+  </div>
+  <div class="hamburger" onclick="document.getElementById('navLinks').classList.toggle('open')">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<div class="project-page">
+
+  <div class="project-hero">
+    <span class="hero-emoji">🏠</span>
+    <p class="section-label" style="margin-bottom:10px; color:var(--neon2);">// Java Desktop App</p>
+    <h1 style="margin-bottom:16px;">🏠 Hostel Room Allocation System</h1>
+    <p style="color:var(--muted); max-width:520px; line-height:1.7; font-size:0.97rem; margin:0;">
+      A desktop application that automates the end-to-end process of hostel room allocation —
+      replacing manual paperwork with a clean, GUI-driven system built in Java Swing.
+    </p>
+    <div class="project-meta">
+      <div class="meta-item"><span class="meta-label">Type</span><span class="meta-value">Desktop Application</span></div>
+      <div class="meta-item"><span class="meta-label">Role</span><span class="meta-value">Solo Developer</span></div>
+      <div class="meta-item"><span class="meta-label">Stack</span><span class="meta-value">Java · Swing</span></div>
+    </div>
+  </div>
+
+  <div class="content-block">
+    <h2>Overview</h2>
+    <p>
+      Managing hostel room allocations manually is slow and error-prone. This system was built to
+      <strong>automate student registration, room assignment, and occupancy tracking</strong>
+      through an intuitive desktop GUI.
+    </p>
+    <p>
+      Built entirely in Java using the Swing framework, the application uses
+      <strong>Object-Oriented Programming principles</strong> to keep the codebase modular —
+      with clean separation between the UI layer, business logic, and data management.
+    </p>
+  </div>
+
+  <div class="content-block">
+    <h2>My Role &amp; Contribution</h2>
+    <div class="two-col">
+      <div class="highlight-box">
+        <h3>🖼️ GUI Design</h3>
+        <ul>
+          <li>Designed all Swing forms for student registration and room management</li>
+          <li>Built interactive tables to display room occupancy status in real time</li>
+          <li>Implemented form validation to prevent invalid data entry</li>
+          <li>Created a clean navigation flow between screens</li>
+        </ul>
+      </div>
+      <div class="highlight-box">
+        <h3>🧠 Business Logic</h3>
+        <ul>
+          <li>Designed the allocation algorithm to assign rooms based on availability</li>
+          <li>Modelled Student, Room, and Allocation as distinct OOP classes</li>
+          <li>Handled edge cases: room full, student already allocated, invalid ID</li>
+          <li>Implemented search and filter functions for admin use</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="content-block">
+    <h2>Key Features</h2>
+    <ul>
+      <li>Student registration with profile data management</li>
+      <li>Automated room assignment based on real-time availability</li>
+      <li>Occupancy tracking dashboard for administrators</li>
+      <li>Search and filter students by name, room, or status</li>
+      <li>Modular OOP architecture — easy to extend and maintain</li>
+    </ul>
+  </div>
+
+  <div class="content-block">
+    <h2>Challenges &amp; How I Solved Them</h2>
+    <div class="two-col">
+      <div class="highlight-box">
+        <h3>🔄 Keeping UI in Sync</h3>
+        <ul>
+          <li>After any allocation change, multiple UI panels needed to update simultaneously</li>
+          <li>Implemented an observer-style refresh pattern — any data change triggers a UI reload across all relevant panels</li>
+        </ul>
+      </div>
+      <div class="highlight-box">
+        <h3>🏗️ OOP Class Design</h3>
+        <ul>
+          <li>Deciding how to structure Student, Room, and Hostel classes without tight coupling</li>
+          <li>Used composition and clear interfaces so each class had a single responsibility</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="content-block">
+    <h2>What I Learned</h2>
+    <div class="learned-grid">
+      <div class="learned-card">
+        <span class="icon">☕</span>
+        <h4>Java Swing GUI</h4>
+        <p>Building real desktop interfaces with layouts, tables, forms, and event listeners in Swing.</p>
+      </div>
+      <div class="learned-card">
+        <span class="icon">🏛️</span>
+        <h4>OOP Design</h4>
+        <p>Applying encapsulation, inheritance, and composition to keep large codebases maintainable.</p>
+      </div>
+      <div class="learned-card">
+        <span class="icon">🔗</span>
+        <h4>UI–Logic Separation</h4>
+        <p>Keeping business logic out of event handlers — the foundation of clean architecture.</p>
+      </div>
+      <div class="learned-card">
+        <span class="icon">🐛</span>
+        <h4>Defensive Programming</h4>
+        <p>Handling edge cases and invalid states gracefully so the app never crashes on bad input.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="content-block">
+    <h2>Tech Stack</h2>
+    <div class="tech-stack">
+      <span class="tech-pill">Java</span>
+      <span class="tech-pill">Java Swing</span>
+      <span class="tech-pill">OOP</span>
+      <span class="tech-pill">AWT</span>
+    </div>
+  </div>
+
+  <div class="content-block">
+    <h2>Screenshots</h2>
+    <div class="screenshots">
+      <img src="images/hostel1.png" alt="Hostel allocation dashboard" width="300">
+      <img src="images/hostel2.png" alt="Student registration form" width="300">
+    </div>
+  </div>
+
+  <div class="project-links">
+    <a href="https://github.com/Manaswini-2512/Hostel-Room-Allocation-System" class="btn btn-primary" target="_blank">↗ View on GitHub</a>
+    <a href="projects.html" class="btn btn-outline">⬅ Back to Projects</a>
+  </div>
+
+</div>
+
+<footer><p>Designed &amp; built by <span>Manaswini</span> · 2025</p></footer>
+</body>
+</html>

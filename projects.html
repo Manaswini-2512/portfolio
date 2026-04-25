@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Projects | Manaswini</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">M<span>.</span></a>
+  <div class="nav-links" id="navLinks">
+    <a href="index.html#about">About</a>
+    <a href="index.html#skills">Skills</a>
+    <a href="index.html#projects">Projects</a>
+    <a href="index.html#contact">Contact</a>
+  </div>
+  <div class="hamburger" onclick="document.getElementById('navLinks').classList.toggle('open')">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<section style="margin-top: 40px;">
+  <p class="section-label reveal">// Projects</p>
+  <h2 class="section-title reveal">All <span>Projects</span></h2>
+
+  <div class="projects-grid reveal-stagger">
+    <div class="card">
+      <span class="card-emoji">🎮</span>
+      <h3>Stacking Plates</h3>
+      <p>Multi-level Pygame puzzle game with timer-based gameplay, leaderboard tracking, and undo functionality.</p>
+      <div class="card-tags">
+        <span class="tag">Python</span>
+        <span class="tag">Pygame</span>
+      </div>
+      <a href="stacking.html" class="btn btn-outline">View Details →</a>
+    </div>
+
+    <div class="card">
+      <span class="card-emoji">🌍</span>
+      <h3>Trawell</h3>
+      <p>Full-stack MERN tourism platform for exploring destinations and purchasing handicrafts online.</p>
+      <div class="card-tags">
+        <span class="tag">MongoDB</span>
+        <span class="tag">React</span>
+        <span class="tag">Node</span>
+      </div>
+      <a href="trawell.html" class="btn btn-outline">View Details →</a>
+    </div>
+
+    <div class="card">
+      <span class="card-emoji">🏠</span>
+      <h3>Hostel Allocation</h3>
+      <p>Desktop Java Swing app to automate hostel room allocation and track student accommodation.</p>
+      <div class="card-tags">
+        <span class="tag">Java</span>
+        <span class="tag">Swing</span>
+        <span class="tag">OOP</span>
+      </div>
+      <a href="hostel.html" class="btn btn-outline">View Details →</a>
+    </div>
+
+    <div class="card">
+      <span class="card-emoji">💰</span>
+      <h3>SIP Advisor</h3>
+      <p>Financial advisory web app for analyzing Systematic Investment Plans with data visualization.</p>
+      <div class="card-tags">
+        <span class="tag">Python</span>
+        <span class="tag">Flask</span>
+        <span class="tag">JS</span>
+      </div>
+      <a href="sip.html" class="btn btn-outline">View Details →</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>Designed &amp; built by <span>Manaswini</span> · 2025</p>
+</footer>
+
+<script>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.reveal, .reveal-stagger').forEach(el => observer.observe(el));
+</script>
+</body>
+</html>
